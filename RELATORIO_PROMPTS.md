@@ -66,5 +66,19 @@ Este documento registra todas as interações, comandos e prompts trocados com o
 
 ---
 
+### Iteração 4: Configuração de Usuário e E-mail no Git
+- **Data/Hora:** 14/08/2026 09:31
+- **Ator:** Cristian Sampaio
+- **Prompt do Usuário:**
+  > *"defina o user e email do git com meus dados, voce ainda lembra?"*
+- **Objetivo / Intenção:** Recuperar os dados de autoria do usuário (`fcristianbs` / `cristianbarbosasampaio@gmail.com`) e configurá-los no Git global e localmente para o repositório do projeto.
+- **Ações Realizadas pela IA:**
+  - Localização e confirmação dos dados de configuração do usuário a partir dos registros de repositórios do ambiente (`user.name: fcristianbs`, `user.email: cristianbarbosasampaio@gmail.com`).
+  - Execução dos comandos de configuração `git config --global` e `git config --local`.
+  - Verificação e validação da configuração ativa no repositório.
+- **Resultado:** Git configurado global e localmente com os dados corretos do autor.
+
+---
+
 ## 🔄 Diretriz Permanente de Atualização
 > **Regra Fixada:** A cada novo prompt do usuário, este arquivo `RELATORIO_PROMPTS.md` será obrigatoriamente atualizado com o **Ator**, conteúdo da instrução, objetivo, ações tomadas e o resultado alcançado.
