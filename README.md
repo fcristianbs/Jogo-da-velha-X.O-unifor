@@ -6,7 +6,7 @@ Aplicação web interativa e moderna do clássico **Jogo da Velha** desenvolvida
 
 ## 🌐 Demonstração Online
 
-- **GitHub Pages:** [Link da Aplicação no GitHub Pages](https://github.com/) *(atualizar com o link após deploy)*
+- **GitHub Pages:** [Link da Aplicação no GitHub Pages]  (https://fcristianbs.github.io/Jogo-da-velha-X.O-unifor/)
 
 ---
 
