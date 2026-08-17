@@ -97,5 +97,19 @@ Este documento registra todas as interações, comandos e prompts trocados com o
 
 ---
 
+### Iteração 6: Auditoria de Requisitos e Cruzamento com o CDU
+- **Data/Hora:** 17/08/2026 08:57
+- **Ator:** Cristian Sampaio
+- **Prompt do Usuário:**
+  > *"agora baseado no que voce fez, verifique o CDU e veja oque ja foi feito e oque falta"*
+- **Objetivo / Intenção:** Realizar uma auditoria completa comparando o estado atual da implementação com cada seção do CDU (regras, fluxos, componentes UI-01 a UI-11, requisitos não funcionais e critérios de aceite CA-01 a CA-07) para apresentar um diagnóstico claro do que está pronto e quais são as próximas etapas.
+- **Ações Realizadas pela IA:**
+  - Leitura e mapeamento de todos os itens do arquivo [docs/cdu_JogarJogodavelha.md](file:///c:/git/Jogo%20da%20velha%20X.O%20unifor/docs/cdu_JogarJogodavelha.md).
+  - Cruzamento de cada requisito funcional (RF-01 a RF-08), elementos de interface (UI-01 a UI-11) e critérios de aceite (CA-01 a CA-07) com o código implementado em `src/`.
+  - Elaboração de relatório comparativo detalhado com status de conformidade e próximos passos.
+- **Resultado:** Diagnóstico de conformidade do CDU elaborado e apresentado ao usuário.
+
+---
+
 ## 🔄 Diretriz Permanente de Atualização
 > **Regra Fixada:** A cada novo prompt do usuário, este arquivo `RELATORIO_PROMPTS.md` será obrigatoriamente atualizado com o **Ator**, conteúdo da instrução, objetivo, ações tomadas e o resultado alcançado.
