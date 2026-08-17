@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jogo da Velha Web - Universidade de Fortaleza (UNIFOR). Modos PvP e Contra o Computador, Partida Única ou Melhor de 3.">
+  <title>Jogo da Velha - UNIFOR</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Canvas de Confetes para Efeito de Vitória -->
+  <canvas id="confetti-canvas" aria-hidden="true"></canvas>
+
+  <main class="game-container" id="game-app">
+    <!-- Cabeçalho Institucional -->
+    <header class="game-header">
+      <span class="institutional-subtitle" id="institutional-subtitle">UNIVERSIDADE DE FORTALEZA</span>
+      <h1 class="main-title" id="main-title">JOGO DA VELHA</h1>
+    </header>
+
+    <!-- Controles de Configuração da Partida -->
+    <section class="controls-section" aria-label="Configurações da Partida">
+      <div class="control-group">
+        <label for="mode-select">Modo de Jogo</label>
+        <div class="select-wrapper">
+          <select id="mode-select" class="custom-select" aria-label="Selecione o modo de jogo">
+            <option value="pvp">2 Jogadores (PVP)</option>
+            <option value="cpu">Contra o Computador</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label for="format-select">Formato da Partida</label>
+        <div class="select-wrapper">
+          <select id="format-select" class="custom-select" aria-label="Selecione o formato da disputa">
+            <option value="single">Partida Única</option>
+            <option value="bo3">Melhor de 3 (MD3)</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- Painel de Placar e Rodadas -->
+    <section class="scoreboard-section" aria-label="Placar e Rodadas">
+      <!-- Card Jogador X -->
+      <div class="score-card player-x-card" id="card-player-x">
+        <span class="player-symbol-badge badge-x">X</span>
+        <span class="player-name" id="player-x-label">JOGADOR X</span>
+        <span class="score-value" id="score-x">0</span>
+      </div>
+
+      <!-- Indicador de Rodada -->
+      <div class="round-indicator-card" id="card-round">
+        <span class="round-title">RODADA</span>
+        <span class="round-value" id="round-display">1/1</span>
+      </div>
+
+      <!-- Card Jogador O / CPU -->
+      <div class="score-card player-o-card" id="card-player-o">
+        <span class="player-symbol-badge badge-o">O</span>
+        <span class="player-name" id="player-o-label">JOGADOR O</span>
+        <span class="score-value" id="score-o">0</span>
+      </div>
+    </section>
+
+    <!-- Mensagem de Status / Turno -->
+    <div class="status-bar" id="status-bar" role="status" aria-live="polite">
+      <span class="status-indicator-dot" id="status-dot"></span>
+      <span class="status-message" id="status-message">Vez do Jogador X</span>
+    </div>
+
+    <!-- Tabuleiro do Jogo 3x3 -->
+    <section class="board-wrapper" aria-label="Tabuleiro do Jogo da Velha">
+      <div class="board-grid" id="board-grid" role="grid" aria-label="Matriz do Jogo da Velha 3 por 3">
+        <!-- Linha de Vitória (Overlay) -->
+        <div class="winning-line" id="winning-line" aria-hidden="true"></div>
+
+        <!-- 9 Células do Tabuleiro -->
+        <button type="button" class="cell" id="cell-0" data-index="0" aria-label="Célula 1, linha 1, coluna 1"></button>
+        <button type="button" class="cell" id="cell-1" data-index="1" aria-label="Célula 2, linha 1, coluna 2"></button>
+        <button type="button" class="cell" id="cell-2" data-index="2" aria-label="Célula 3, linha 1, coluna 3"></button>
+        <button type="button" class="cell" id="cell-3" data-index="3" aria-label="Célula 4, linha 2, coluna 1"></button>
+        <button type="button" class="cell" id="cell-4" data-index="4" aria-label="Célula 5, linha 2, coluna 2"></button>
+        <button type="button" class="cell" id="cell-5" data-index="5" aria-label="Célula 6, linha 2, coluna 3"></button>
+        <button type="button" class="cell" id="cell-6" data-index="6" aria-label="Célula 7, linha 3, coluna 1"></button>
+        <button type="button" class="cell" id="cell-7" data-index="7" aria-label="Célula 8, linha 3, coluna 2"></button>
+        <button type="button" class="cell" id="cell-8" data-index="8" aria-label="Célula 9, linha 3, coluna 3"></button>
+      </div>
+    </section>
+
+    <!-- Botão de Reinício Geral -->
+    <footer class="game-footer">
+      <button type="button" class="btn-restart" id="restart-btn" aria-label="Reiniciar o jogo da velha">
+        <svg class="restart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/>
+        </svg>
+        <span>REINICIAR JOGO</span>
+      </button>
+    </footer>
+  </main>
+
+  <!-- Script da Lógica -->
+  <script src="script.js"></script>
+</body>
+</html>

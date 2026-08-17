@@ -80,5 +80,22 @@ Este documento registra todas as interações, comandos e prompts trocados com o
 
 ---
 
+### Iteração 5: Prototipação do Frontend e Implementação Modular (HTML, CSS, JS)
+- **Data/Hora:** 17/08/2026 08:33
+- **Ator:** Cristian Sampaio
+- **Prompt do Usuário:**
+  > *"vamos começar o projeto de fato, acredito que seja ideal começarmos prototipando um frontend e depois ia para logica principal
+  > acredito tambem que seja ideal sera o index em um aquivo html,css,e js, depois de finalizado a gente unifica tudo em um arquivo só"*
+- **Objetivo / Intenção:** Construir a interface visual completa do Jogo da Velha UNIFOR de forma modular (`src/index.html`, `src/style.css` e `src/script.js`), contemplando todos os elementos do CDU (UI-01 a UI-11), tokens de design UNIFOR, layout responsivo e validação interativa no navegador.
+- **Ações Realizadas pela IA:**
+  - Criação do arquivo [src/index.html](file:///c:/git/Jogo%20da%20velha%20X.O%20unifor/src/index.html) com estrutura HTML5 semântica e acessível.
+  - Criação do arquivo [src/style.css](file:///c:/git/Jogo%20da%20velha%20X.O%20unifor/src/style.css) com paleta institucional UNIFOR (`#003366`, `#0056b3`, `#d97706`, `#f4f6f9`), grid do tabuleiro, efeitos hover, cards e linha vitoriosa.
+  - Criação do arquivo [src/script.js](file:///c:/git/Jogo%20da%20velha%20X.O%20unifor/src/script.js) com controle de turnos, IA para CPU (com atraso de 400ms), regras de série MD3, sintetizador de áudio Web Audio API (sem dependências de `.mp3`) e motor de confetes em Canvas.
+  - Execução de testes automatizados no navegador com gravação em vídeo e verificação de 100% dos componentes.
+  - Criação do artefato de [walkthrough.md](file:///C:/Users/cristian.sampaio/.gemini/antigravity-ide/brain/35b91940-e8c4-424f-b132-90c13356f68b/walkthrough.md).
+- **Resultado:** Frontend prototipado, modularizado e testado com sucesso no navegador.
+
+---
+
 ## 🔄 Diretriz Permanente de Atualização
 > **Regra Fixada:** A cada novo prompt do usuário, este arquivo `RELATORIO_PROMPTS.md` será obrigatoriamente atualizado com o **Ator**, conteúdo da instrução, objetivo, ações tomadas e o resultado alcançado.
