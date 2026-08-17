@@ -111,5 +111,20 @@ Este documento registra todas as interações, comandos e prompts trocados com o
 
 ---
 
+### Iteração 7: Implementação do Modo Noturno (Dark Mode)
+- **Data/Hora:** 17/08/2026 09:01
+- **Ator:** Cristian Sampaio
+- **Prompt do Usuário:**
+  > *"vamos adicionar um botão de modo noturno"*
+- **Objetivo / Intenção:** Adicionar um botão de alternância de tema Claro / Noturno no cabeçalho com transições suaves, estilização adaptada preservando o contraste e a identidade visual institucional, sintetização sonora de clique e persistência automática da preferência do usuário via `localStorage`.
+- **Ações Realizadas pela IA:**
+  - Atualização do [src/index.html](file:///c:/git/Jogo%20da%20velha%20X.O%20unifor/src/index.html) com o botão `#theme-toggle-btn` e ícones SVG de Sol e Lua.
+  - Atualização do [src/style.css](file:///c:/git/Jogo%20da%20velha%20X.O%20unifor/src/style.css) com suporte completo a variáveis CSS no seletor `body.dark-mode`, cores refinadas (tons profundos de azul/grafite e realces luminosos) e transições suaves.
+  - Atualização do [src/script.js](file:///c:/git/Jogo%20da%20velha%20X.O%20unifor/src/script.js) com funções `initTheme()` e `toggleTheme()`, persistência com `localStorage` e efeito sonoro via Web Audio API.
+  - Validação automatizada via navegador com gravação em vídeo.
+- **Resultado:** Modo Noturno integrado, testado e funcional.
+
+---
+
 ## 🔄 Diretriz Permanente de Atualização
 > **Regra Fixada:** A cada novo prompt do usuário, este arquivo `RELATORIO_PROMPTS.md` será obrigatoriamente atualizado com o **Ator**, conteúdo da instrução, objetivo, ações tomadas e o resultado alcançado.

@@ -3,7 +3,7 @@
  * Universidade de Fortaleza
  * 
  * Lógica do Jogo, Controle de Turnos, IA, Séries MD3,
- * Efeitos Visuais (Linha e Confetes) e Síntese de Áudio (Web Audio API).
+ * Modo Noturno (Dark Mode), Efeitos Visuais e Síntese de Áudio (Web Audio API).
  */
 
 (() => {
@@ -37,7 +37,7 @@
   ];
 
   /* ==========================================================================
-     2. Mapeamento de Elementos do DOM (UI-01 a UI-11)
+     2. Mapeamento de Elementos do DOM (UI-01 a UI-11 + Tema)
      ========================================================================== */
   const elements = {
     modeSelect: document.getElementById('mode-select'),
@@ -54,7 +54,8 @@
     winningLine: document.getElementById('winning-line'),
     restartBtn: document.getElementById('restart-btn'),
     cells: Array.from(document.querySelectorAll('.cell')),
-    confettiCanvas: document.getElementById('confetti-canvas')
+    confettiCanvas: document.getElementById('confetti-canvas'),
+    themeToggleBtn: document.getElementById('theme-toggle-btn')
   };
 
   /* ==========================================================================
@@ -105,6 +106,7 @@
   const soundEffects = {
     moveX: () => playTone(520, 'sine', 0.12, 0.12),
     moveO: () => playTone(380, 'sine', 0.12, 0.12),
+    themeToggle: () => playTone(620, 'sine', 0.08, 0.06),
     tie: () => {
       // Tom descendente
       try {
@@ -150,7 +152,7 @@
     if (!ctx) return;
 
     confettiParticles = [];
-    const colors = ['#003366', '#0056b3', '#d97706', '#f59e0b', '#10b981', '#6366f1'];
+    const colors = ['#003366', '#0056b3', '#38bdf8', '#d97706', '#f59e0b', '#fbbf24', '#10b981'];
 
     for (let i = 0; i < 90; i++) {
       confettiParticles.push({
@@ -518,7 +520,26 @@
   }
 
   /* ==========================================================================
-     6. Eventos e Inicialização
+     6. Modo Noturno / Gerenciamento de Tema
+     ========================================================================== */
+  function initTheme() {
+    const savedTheme = localStorage.getItem('unifor_ttt_theme');
+    if (savedTheme === 'dark' || (!savedTheme && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.body.classList.add('dark-mode');
+    } else {
+      document.body.classList.remove('dark-mode');
+    }
+  }
+
+  function toggleTheme() {
+    document.body.classList.toggle('dark-mode');
+    const isDark = document.body.classList.contains('dark-mode');
+    localStorage.setItem('unifor_ttt_theme', isDark ? 'dark' : 'light');
+    soundEffects.themeToggle();
+  }
+
+  /* ==========================================================================
+     7. Eventos e Inicialização
      ========================================================================== */
 
   // Seletor de Modo (PVP vs CPU)
@@ -544,6 +565,11 @@
     resetFullGame();
   });
 
+  // Botão de Tema (Modo Noturno)
+  if (elements.themeToggleBtn) {
+    elements.themeToggleBtn.addEventListener('click', toggleTheme);
+  }
+
   // Redimensionamento de janela (recálculo de linha e canvas de confetes)
   window.addEventListener('resize', () => {
     if (elements.confettiCanvas) {
@@ -553,6 +579,7 @@
   });
 
   // Inicialização
+  initTheme();
   updateRoundDisplay();
   updateStatusUI('Vez do Jogador X');
 
