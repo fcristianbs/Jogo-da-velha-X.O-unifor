@@ -88,11 +88,11 @@ Este documento registra todas as interações, comandos e prompts trocados com o
   > acredito tambem que seja ideal sera o index em um aquivo html,css,e js, depois de finalizado a gente unifica tudo em um arquivo só"*
 - **Objetivo / Intenção:** Construir a interface visual completa do Jogo da Velha UNIFOR de forma modular (`src/index.html`, `src/style.css` e `src/script.js`), contemplando todos os elementos do CDU (UI-01 a UI-11), tokens de design UNIFOR, layout responsivo e validação interativa no navegador.
 - **Ações Realizadas pela IA:**
-  - Criação do arquivo [src/index.html](file:///c:/git/Jogo%20da%20velha%20X.O%20unifor/src/index.html) com estrutura HTML5 semântica e acessível.
-  - Criação do arquivo [src/style.css](file:///c:/git/Jogo%20da%20velha%20X.O%20unifor/src/style.css) com paleta institucional UNIFOR (`#003366`, `#0056b3`, `#d97706`, `#f4f6f9`), grid do tabuleiro, efeitos hover, cards e linha vitoriosa.
-  - Criação do arquivo [src/script.js](file:///c:/git/Jogo%20da%20velha%20X.O%20unifor/src/script.js) com controle de turnos, IA para CPU (com atraso de 400ms), regras de série MD3, sintetizador de áudio Web Audio API (sem dependências de `.mp3`) e motor de confetes em Canvas.
+  - Criação do arquivo `src/index.html` com estrutura HTML5 semântica e acessível.
+  - Criação do arquivo `src/style.css` com paleta institucional UNIFOR (`#003366`, `#0056b3`, `#d97706`, `#f4f6f9`), grid do tabuleiro, efeitos hover, cards e linha vitoriosa.
+  - Criação do arquivo `src/script.js` com controle de turnos, IA para CPU (com atraso de 400ms), regras de série MD3, sintetizador de áudio Web Audio API (sem dependências de `.mp3`) e motor de confetes em Canvas.
   - Execução de testes automatizados no navegador com gravação em vídeo e verificação de 100% dos componentes.
-  - Criação do artefato de [walkthrough.md](file:///C:/Users/cristian.sampaio/.gemini/antigravity-ide/brain/35b91940-e8c4-424f-b132-90c13356f68b/walkthrough.md).
+  - Criação do artefato de `walkthrough.md`.
 - **Resultado:** Frontend prototipado, modularizado e testado com sucesso no navegador.
 
 ---
@@ -118,11 +118,38 @@ Este documento registra todas as interações, comandos e prompts trocados com o
   > *"vamos adicionar um botão de modo noturno"*
 - **Objetivo / Intenção:** Adicionar um botão de alternância de tema Claro / Noturno no cabeçalho com transições suaves, estilização adaptada preservando o contraste e a identidade visual institucional, sintetização sonora de clique e persistência automática da preferência do usuário via `localStorage`.
 - **Ações Realizadas pela IA:**
-  - Atualização do [src/index.html](file:///c:/git/Jogo%20da%20velha%20X.O%20unifor/src/index.html) com o botão `#theme-toggle-btn` e ícones SVG de Sol e Lua.
-  - Atualização do [src/style.css](file:///c:/git/Jogo%20da%20velha%20X.O%20unifor/src/style.css) com suporte completo a variáveis CSS no seletor `body.dark-mode`, cores refinadas (tons profundos de azul/grafite e realces luminosos) e transições suaves.
-  - Atualização do [src/script.js](file:///c:/git/Jogo%20da%20velha%20X.O%20unifor/src/script.js) com funções `initTheme()` e `toggleTheme()`, persistência com `localStorage` e efeito sonoro via Web Audio API.
+  - Atualização de `src/index.html` com o botão `#theme-toggle-btn` e ícones SVG de Sol e Lua.
+  - Atualização de `src/style.css` com suporte completo a variáveis CSS no seletor `body.dark-mode`, cores refinadas (tons profundos de azul/grafite e realces luminosos) e transições suaves.
+  - Atualização de `src/script.js` com funções `initTheme()` e `toggleTheme()`, persistência com `localStorage` e efeito sonoro via Web Audio API.
   - Validação automatizada via navegador com gravação em vídeo.
 - **Resultado:** Modo Noturno integrado, testado e funcional.
+
+---
+
+### Iteração 8: Validação Global e Geração de Checklist de Conformidade do CDU
+- **Data/Hora:** 17/08/2026 09:09
+- **Ator:** Cristian Sampaio
+- **Prompt do Usuário:**
+  > *"baseado no que nós fizemos, verifique o documento cdu e compare se todos os requisitos ja estão nos conformes, e gere um pequeno check list"*
+- **Objetivo / Intenção:** Realizar uma conferência rigorosa de todos os itens do CDU (Critérios de Aceite CA-01 a CA-07, Requisitos Funcionais RF-01 a RF-08, Componentes de Interface UI-01 a UI-11, Fluxos de Jogo e Requisitos Não Funcionais) e gerar um checklist executivo de conformidade.
+- **Ações Realizadas pela IA:**
+  - Verificação detalhada item a item contra o código implementado e testado.
+  - Consolidação de checklist completo estruturado por categorias.
+- **Resultado:** Checklist executivo de conformidade do CDU gerado e disponibilizado para avaliação da equipe.
+
+---
+
+### Iteração 9: Unificação em Arquivo Único (index.html)
+- **Data/Hora:** 17/08/2026 09:12
+- **Ator:** Cristian Sampaio
+- **Prompt do Usuário:**
+  > *"vamos unificar tudo em apenas um arquivo index.html"*
+- **Objetivo / Intenção:** Consolidar todo o código-fonte (HTML, estilos CSS com temas Claro/Noturno e lógica JavaScript completa com Web Audio API, IA e confetes) em um único arquivo [src/index.html](file:///c:/git/Jogo%20da%20velha%20X.O%20unifor/src/index.html) autônomo, cumprindo o Requisito Não Funcional de Portabilidade do CDU e ajustando a estrutura do repositório conforme especificação original.
+- **Ações Realizadas pela IA:**
+  - Unificação do CSS e JavaScript dentro das tags `<style>` e `<script>` no arquivo [src/index.html](file:///c:/git/Jogo%20da%20velha%20X.O%20unifor/src/index.html).
+  - Remoção dos arquivos modulares intermediários `src/style.css` e `src/script.js`.
+  - Verificação e validação visual do arquivo unificado no navegador.
+- **Resultado:** Código-fonte completamente unificado em `src/index.html` autônomo e repositório 100% aderente à estrutura solicitada.
 
 ---
 
