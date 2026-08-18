@@ -9,7 +9,7 @@ Este documento registra todas as interações, comandos e prompts trocados com o
 - **Projeto:** Jogo da Velha Web (UNIFOR)
 - **Instituição:** Universidade de Fortaleza (UNIFOR)
 - **Curso/Disciplina:** Desenvolvimento Front-end / Engenharia de Software
-- **Equipe / Integrantes:** Cristian Sampaio e Equipe
+- **Equipe / Integrantes:** Cristian Sampaio (2310539) Gilberto de Souza (2214606) Davi Alves (2520357)
 - **Assistente IA:** Antigravity (Google DeepMind - Gemini 3.7 Flash)
 - **Início do Projeto:** 14/08/2026
 
