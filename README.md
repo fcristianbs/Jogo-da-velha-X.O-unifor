@@ -7,6 +7,7 @@ Aplicação web interativa e moderna do clássico **Jogo da Velha** desenvolvida
 ## 🌐 Demonstração Online
 
 - **GitHub Pages:** [Link da Aplicação no GitHub Pages]  (https://fcristianbs.github.io/Jogo-da-velha-X.O-unifor/)
+- Equipe / Integrantes: Cristian Sampaio (2310539) Gilberto de Souza (2214606) Davi Alves (2520357)
 
 ---
 
